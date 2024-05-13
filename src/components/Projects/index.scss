@@ -1,0 +1,127 @@
+
+.project-page {
+    width: 100%;
+    height: 80%;
+    will-change: contents;
+    min-height: 566px;
+    position: absolute;
+    opacity: 0;
+    top: 8%;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 5s forwards; 
+    animation-delay: 1s;
+    overflow-y: auto; 
+}
+.project-container {
+    top: 10%;
+    display: flex;
+    justify-content: space-between; /* Consistently space items across the container width */
+    align-items: center; /* Vertically center items */
+    position: relative;
+    width: 100%;
+    gap: 20px; /* More reasonable gap, adjust based on your layout needs */
+    margin-bottom: 400px; 
+
+    .text-zone-project{
+        position: absolute;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 40%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+        h3{
+            font-size: 30px;
+            font-family: 'Coolvetica';
+            color: white; 
+            font-weight: 400;
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 40px;
+            left :-10px;
+
+            &::before {
+                content: '<h3>';
+                font-family: 'La Belle Aurore', cursive;
+                color: white;
+                font-size: 18px;
+                position: absolute;
+                margin-top: -10px;
+                left: -10px;
+                opacity: 0.6;
+                line-height: 18px;
+            }
+        
+            &::after {
+                content: '</h3>';
+                font-family: 'La Belle Aurore', cursive;
+                color: white;
+                font-size: 18px;
+                line-height: 18px;
+                position: absolute;
+                left: -30px;
+                bottom: -20px;
+                margin-left: 20px;
+                opacity: 0.6;
+            }
+        }
+    }
+    img{
+        z-index: 0;
+        width: 600px;
+        height: 400px;
+        position: absolute;
+        align-items: center;
+        right: 10%; /* Adjusted to align right to the edge of the closest positioned ancestor */
+        top: 50%; /* Center vertically relative to the parent container */
+        transform: translateY(-50%); /* Ensures the center of the image aligns with the center of the container vertically */
+        opacity: 1;
+        margin-bottom: 400px;
+        margin-top: 150px;
+        border: 2px solid white;
+
+
+        
+    }
+    p {
+        font-size: 18px;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 300;
+        max-width: fit-content;
+        animation: pulse 1s;
+        position: relative;
+        &:nth-of-type(1) {
+          animation-delay: 1.1s;
+        }
+        &:nth-of-type(2) {
+          animation-delay: 1.2s;
+        }
+        &::before {
+            content: '<p>';
+            font-family: 'La Belle Aurore', cursive;
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -10px;
+            left: -15px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+    
+        &::after {
+            content: '</p>';
+            font-family: 'La Belle Aurore', cursive;
+            color: white;
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            left: -40px;
+            bottom: -20px;
+            margin-left: 20px;
+            opacity: 0.6;
+        }
+    }
+}
